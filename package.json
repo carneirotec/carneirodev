@@ -1,0 +1,11 @@
+{
+  "name": "carneirodev-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Anildo Carneiro",
+  "license": "MIT",
+  "description": ""
+}

@@ -1,0 +1,49 @@
+.button {
+    color: white; /* Text color for all buttons */
+    border: none; /* Remove default border */
+    padding: 10px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Make links behave like buttons */
+    font-weight: bold; /* Make text bold */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.email-button {
+    background-color: #ffffff; /* Blue for Email */
+    border-width: 1px;
+    border-style: solid;
+    border-color: silver;
+}
+
+.facebook-button {
+    background-color: #1877F2; /* Facebook blue */
+}
+
+.github-button {
+    background-color: #333; /* GitHub dark gray */
+}
+
+.instagram-button {
+    background-color: #C13584; /* Instagram pink */
+}
+
+.linkedin-button {
+    background-color: #0A66C2; /* LinkedIn blue */
+}
+
+.medium-button {
+    background-color: #00AB6C; /* Medium green */
+}
+
+.tumblr-button {
+    background-color: #35465C; /* Tumblr dark blue */
+}
+
+.youtube-button {
+    background-color: #FF0000; /* YouTube red */
+}
+
+.x-button {
+    background-color: #000000; /* X (formerly Twitter) blue */
+}

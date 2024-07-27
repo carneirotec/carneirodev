@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Carneiro Dev]]></title>
+    <link href="/blog/categories/Tutorial.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2024-07-27T16:39:44+00:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Desafio do GPE]]></title>
+            <link href="/blog/2024/07/22/2024-desafio-do-gpe/"/>
+            <updated>2024-07-22T00:00:00+00:00</updated>
+            <id>/blog/2024/07/22/2024-desafio-do-gpe/</id>
+            <content type="html"><![CDATA[<section>
+    <h2>Introdução</h2>
+    <p>Olá a todos. Aqui é o Anildo Carneiro e você está acompanhando o Carneiro Dev.</p>
+    <p>Desde quando a internet começou a ficar acessível, cada pessoa quer ter um espaço nela. Isto pode ser feito de
+        várias maneiras, como endereço de e-mail, blog ou perfil em rede social. Não há um único caminho correto a
+        seguir, pois é o espaço de cada um e cada um faz como quer. No entanto, hoje mostrarei como é possível fazer seu
+        lugar na internet com "Geradores de Páginas Estáticas (GPE)", também conhecidos como Static Site Generators
+        (<a href="https://en.wikipedia.org/wiki/Static_site_generator">SSG</a>).</p>
+
+    <p>Desenvolver um GPE é um exercício interessante para um programador/desenvolvedor. O pensamento é simples: usando
+        a linguagem que você escolher, usar uma aplicação que escreve páginas HTML estáticas. Neste guia, usarei PHP,
+        mas
+        se você deseja usar outra linguagem, recomendo o site "<a href="https://jamstack.org/">Jamstack</a>". Na opção
+        de Static Site Generator, existe um
+        filtro de linguagens e bibliotecas/estruturas. Se não encontrar uma biblioteca ou estrutura da sua linguagem lá,
+        boa sorte em encontrar
+        em outro lugar ou desenvolver seu próprio GPE.</p>
+
+    <h3>Ambiente de Desenvolvimento</h3>
+    <p>Em PHP, temos algumas alternativas de GPE. As que eu destaco são <a href="https://jigsaw.tighten.com/">Jigsaw</a>
+        e <a href="https://sculpin.io/">Sculpin</a>. Jigsaw é uma estrutura baseado
+        em Laravel que usa Blade e Markdown como motor de modelo. Sculpin, por outro lado, é um estrutura baseado em
+        Symfony que usa Twig e Markdown como motor de modelo. Para esta tarefa, não há muito o que comparar. As duas
+        ferramentas possuem uma boa documentação e bons modelos prontos para você se basear. Se quiser seguir com PHP,
+        leia um pouco da documentação das duas estruturas e escolha o que mais lhe agradar. Para continuar,
+        usarei Sculpin, mas você pode usar qualquer outro GPE.</p>
+
+    <p>Os requisitos para utilizar Sculpin são simples: PHP, Composer, Editor de Texto e GIT (recomendado).</p>
+
+    <p>Tendo os requisitos necessários, você pode iniciar o projeto de duas formas:</p>
+
+    <b>I. Apenas com o núcleo do projeto:</b>
+    <p>Usando esta forma você terá o início mais enxuto desta estrutura. É bem minimalista, se quiser iniciar por aqui
+        você deve ler a documentação algumas vezes antes de começar, pois você precisará configurar algumas
+        funcionalidades e criar diretórios por si só.</p>
+    <pre><code>
+    mkdir <i>nomedoprojeto</i>
+    cd <i>nomedoprojeto</i>
+    git init
+    composer init
+    require sculpin/sculpin
+    require --dev phpunit
+    vendor/bin/sculpin init .
+    </code></pre>
+    <b>II. Usando um modelo:</b>
+    <p>Esta forma já é mais completa, vem até mesmo com postagens de exemplo. Se você quer algo pronto e só deixar com
+        sua cara depois essa é a melhor opção.</p>
+    <pre><code>
+    composer create-project sculpin/blog-skeleton <i>nomedoprojeto</i>
+    cd <i>nomedoprojeto</i>
+    require --dev phpunit
+    git init
+    </code></pre>
+    <p>Seguindo qualquer uma das opções, o Sculpin gerará os arquivos iniciais do projeto. Assim você já poderá rodar o
+        comando abaixo que criará a pasta "output_dev" e iniciará sua página no endereço https://localhost:8000</p>
+    <pre><code>
+    vendor/bin/sculpin generate --watch --server
+    </code></pre>
+    <h3>Adicionando Conteúdo</h3>
+    <p>Há algumas formas de inserir novos conteúdos na sua página, a documentação é bem explicativa. Se você usou o
+        segundo formato você notará que foi criada uma pasta "_post", lá você poderá modificar as postagens existentes
+        para adicionar a sua. Agora para quem usou o primeiro formato, pode colocar tudo na pasta "source" e vincular de
+        alguma forma ou seguir o padrão do projeto conforme os exemplos que eles dão.
+    </p>
+    <p>As postagens tem um padrão de nomenclatura, você deverá adicionar um arquivo com o nome
+        seguindo o formato "ano-mes-dia-titulo-da-postagem.md(.html, .twig ou outro formato suportado)" ou personalizar
+        no arquivo de configuração.
+    </p>
+    <p>
+        Os projetos iniciais do Sculpin dão algumas ideias como adicionar marcadores(tags) e categorias ao sua página.
+        Vale a pena dar uma estudada.
+    </p>
+    <h3>Personalizando</h3>
+    <p>Se você quiser deixar sua página mais estilizada ou interativa você tem a possibilidade de unir um projeto
+        Javascript com package.json ou baixar bibliotecas CSS e etc. No meu caso eu fui bem minimalista, estou usando um
+        CND da Bulma.io assim eu mal uso Javascript na minhas páginas, o que deixar mais rápido em carregar no lado do
+        cliente e mais fácil de dar manutenção. O próprio Twig me permite recorrer a alguns laços de repetições e
+        tratamento de variáveis, então grande parte do html é gerado com o comando "generate" do Sculpin</p>
+    <h3>Construindo</h3>
+    <p>Após concluir a personalização do seu GPE, você pode gerar os arquivos de produção:</p>
+    <pre><code>
+    vendor/bin/sculpin generate --env=prod
+    </code></pre>
+    <p>
+        Se você notou, na documentação na opção de <a
+            href="https://sculpin.io/documentation/configuration/">configuração</a>, eles ensinam como gerar
+        configuração própria para produção e para desenvolvimento. Com isto, você poderá colocar o endereço do seu
+        domínio, as chaves necessárias para anúncios caso você se interessar, ou até mesmo dados do Google Analytics.
+    </p>
+    <p><i>** Dica: Quando você remover algum link de arquivo ou diretório, apague as pastas de prod e env. Depois que
+            você usa o "generate" o Sculpin cria arquivos e modifica eles, ele não apaga arquivo. Então por mais que
+            você
+            remova o link o arquivo ainda estará lá e pode atrapalhar no seus testes ou ir para produção
+            despercebido</i></p>
+    <h3>Implementando</h3>
+    <p>Concluído os passos anteriores os arquivos de produção prontos, a partir de agora você já pode subir seu projeto
+        na rede. Eu usarei o GitHub com GitHub Pages para hospedar meu site, mas você pode simplesmente copiar o
+        diretório e usar qualquer outro serviço de cloud.
+    </p>
+</section>]]></content>
+        </entry>
+    </feed>
