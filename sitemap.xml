@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc></loc>
+    <loc>https://carneirotec.github.io/carneirodev</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
     <url>
-    <loc>/blog/2024/07/22/2024-desafio-do-gpe/</loc>
+    <loc>https://carneirotec.github.io/carneirodev/blog/2024/07/22/2024-desafio-do-gpe/</loc>
     <lastmod>2024-07-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

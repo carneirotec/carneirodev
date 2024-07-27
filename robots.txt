@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /blog/tags/
 Disallow: /blog/categories/
 
-Sitemap: /sitemap.xml
+Sitemap: https://carneirotec.github.io/carneirodev/sitemap.xml

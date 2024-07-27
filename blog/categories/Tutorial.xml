@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[Carneiro Dev]]></title>
-    <link href="/blog/categories/Tutorial.xml" rel="self"/>
-    <link href="/"/>
-    <updated>2024-07-27T16:39:44+00:00</updated>
-    <id>/</id>
+    <link href="https://carneirotec.github.io/carneirodev/blog/categories/Tutorial.xml" rel="self"/>
+    <link href="https://carneirotec.github.io/carneirodev/"/>
+    <updated>2024-07-27T16:48:00+00:00</updated>
+    <id>https://carneirotec.github.io/carneirodev/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Desafio do GPE]]></title>
-            <link href="/blog/2024/07/22/2024-desafio-do-gpe/"/>
+            <link href="https://carneirotec.github.io/carneirodev/blog/2024/07/22/2024-desafio-do-gpe/"/>
             <updated>2024-07-22T00:00:00+00:00</updated>
-            <id>/blog/2024/07/22/2024-desafio-do-gpe/</id>
+            <id>https://carneirotec.github.io/carneirodev/blog/2024/07/22/2024-desafio-do-gpe/</id>
             <content type="html"><![CDATA[<section>
     <h2>Introdução</h2>
     <p>Olá a todos. Aqui é o Anildo Carneiro e você está acompanhando o Carneiro Dev.</p>
