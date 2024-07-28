@@ -1,11 +1,14 @@
 {
-  "name": "carneirodev-frontend",
+  "name": "carneirodev",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "assets/js/main.js",
   "scripts": {
     "test": "test"
   },
   "author": "Anildo Carneiro",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
